@@ -1,17 +1,23 @@
-
-import { Card, CardContent } from "@shadcn/ui"
-import Image from "next/image"; 
-
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { MenuIcon } from "lucide-react"
 
 const Header = () => {
-    return (
-        <Card>
-            <CardContent>
+  return (
+    <header className="flex items-center justify-between p-5 w-full">
+      <Image
+        src="/assets/logo.png"
+        alt="FSW Barber"
+        width={120}
+        height={18}
+        priority
+      />
 
-                <Image src="/assets/logo.png" alt="Logo" width={18} height={120} />
-                </CardContent>
-        </Card>
-    );
+      <Button size="icon" variant="outline">
+        <MenuIcon size={18} />
+      </Button>
+    </header>
+  )
 }
- 
-export default Header;
+
+export default Header
